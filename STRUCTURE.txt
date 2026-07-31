@@ -1,0 +1,125 @@
+INVENTORY MANAGEMENT SYSTEM - FOLDER STRUCTURE
+================================================
+
+inventory/
+│
+├── app/                          # Application Core
+│   ├── controllers/              # Business Logic Controllers (Future)
+│   ├── models/                   # Data Models (Future)
+│   └── helpers/                  # Helper Functions
+│       └── paths.php             # Path management utilities
+│
+├── public/                       # Public Assets
+│   ├── css/                      # Stylesheets
+│   ├── js/                       # JavaScript Files
+│   └── images/                   # Image Assets
+│
+├── includes/                     # Reusable Components
+│   └── sidebar.php              # Navigation Sidebar
+│
+├── modules/                      # Feature Modules
+│   ├── auth/                     # Authentication
+│   │   ├── login.php
+│   │   ├── register.php
+│   │   └── logout.php
+│   │
+│   ├── items/                    # Inventory Items
+│   │   ├── add_item.php
+│   │   ├── edit_item.php
+│   │   ├── delete_item.php
+│   │   ├── itemslist.php
+│   │   └── category.php
+│   │
+│   ├── companies/                # Companies/Vendors
+│   │   ├── add_company.php
+│   │   ├── edit_company.php
+│   │   ├── delete_company.php
+│   │   ├── companies.php
+│   │   ├── company_items.php
+│   │   ├── add_company_item.php
+│   │   ├── edit_company_item.php
+│   │   ├── delete_company_item.php
+│   │   ├── company_bills.php
+│   │   ├── add_company_bill.php
+│   │   ├── edit_company_bill.php
+│   │   └── delete_company_bill.php
+│   │
+│   ├── customers/                # Customers
+│   │   ├── add_customer.php
+│   │   ├── edit_customer.php
+│   │   ├── delete_customer.php
+│   │   └── customers.php
+│   │
+│   └── invoices/                 # Invoices & Sales
+│       ├── cart.php
+│       ├── invoice.php
+│       ├── invoices.php
+│       └── invoice_payment.php
+│
+├── config/                       # Configuration
+│   └── database.php              # Database Connection
+│
+├── assets/                       # Static Assets (Legacy)
+│   └── naicon.png
+│
+├── index.php                     # Entry Point (Login)
+├── dashboard.php                 # Main Dashboard
+├── sidebar.php                   # Sidebar (Legacy - move to includes/)
+├── error.php                     # Error Page
+├── index2.html                   # Alternative Entry
+│
+├── ARCHITECTURE.md               # Architecture Documentation
+└── STRUCTURE.txt                 # This File
+
+FILE ORGANIZATION BY TYPE:
+==========================
+
+AUTHENTICATION:
+- index.php (login)
+- register.php → modules/auth/
+- logout.php → modules/auth/
+
+DASHBOARD:
+- dashboard.php (keep in root or move to app/)
+
+ITEMS MANAGEMENT:
+- add_item.php → modules/items/
+- edit_item.php → modules/items/
+- delete_item.php → modules/items/
+- itemslist.php → modules/items/
+- category.php → modules/items/
+
+COMPANIES MANAGEMENT:
+- add_company.php → modules/companies/
+- edit_company.php → modules/companies/
+- delete_company.php → modules/companies/
+- companies.php → modules/companies/
+- company_items.php → modules/companies/
+- add_company_item.php → modules/companies/
+- edit_company_item.php → modules/companies/
+- delete_company_item.php → modules/companies/
+- company_bills.php → modules/companies/
+- add_company_bill.php → modules/companies/
+- edit_company_bill.php → modules/companies/
+- delete_company_bill.php → modules/companies/
+
+CUSTOMERS MANAGEMENT:
+- add_customer.php → modules/customers/
+- edit_customer.php → modules/customers/
+- delete_customer.php → modules/customers/
+- customers.php → modules/customers/
+
+INVOICES:
+- cart.php → modules/invoices/
+- invoice.php → modules/invoices/
+- invoices.php → modules/invoices/
+- invoice_payment.php → modules/invoices/
+
+SHARED COMPONENTS:
+- sidebar.php → includes/sidebar.php
+
+CONFIGURATION:
+- config/database.php (already in correct location)
+
+ASSETS:
+- assets/naicon.png → public/images/naicon.png
